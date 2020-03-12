@@ -1,3 +1,6 @@
+
+#Cenario 01
+
 Given("the address of the api") do
 
     $url_base = "https://7eb984w4j4.execute-api.us-east-1.amazonaws.com/dev/lambdastresstest"
@@ -13,17 +16,11 @@ When("I put the message data to be sent") do
 
 end
   
-Then("I should see the response body and status code with ok") do
+Then("I should see the response body and status code with {int}") do |int|
     
+    expect(@response.code).to eq(200)
     puts "response code #{@response.code}"
-    puts "response code #{@response.body}"
-
+    
+    expect(@response.message).to eq("OK")
+    puts "response message #{@response.message}"
 end
-  
-
-
-
-
-
-
-
