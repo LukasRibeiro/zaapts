@@ -15,7 +15,7 @@ Then("i should see error to send message") do
   expect(@response.code).to eq(200)
   puts "response code #{@response.code}"
 
-  expect(@response.body).to eq("{\"statusCode\":400,\"body\":\"\\\"Numero invalido\\\"\"}")
+  expect(@response.body).to match("{\"statusCode\":400,\"body\":\"\\\"Numero invalido\\\"\"}")
   puts "response body #{@response.body}"
 
 end
