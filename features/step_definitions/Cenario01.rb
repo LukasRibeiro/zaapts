@@ -7,20 +7,19 @@ Given("the address of the api") do
     
 end
   
-When("I put the message data to be sent") do
-
+When("I enter the message data to be sent") do
+    
     @response = HTTParty.post(
     
     $url_base,
     :body =>{:mensagem =>"Mensagem de teste", :num_destinatario =>"12345678901"}.to_json)
-
 end
-  
+
 Then("I should see the response body and status code with {int}") do |int|
     
     expect(@response.code).to eq(200)
     puts "response code #{@response.code}"
     
-    expect(@response.message).to eq("OK")
-    puts "response message #{@response.message}"
+    expect(@response.body).to eq("{\"statusCode\":200,\"body\":\"\\\"Mensagem enviada com sucesso\\\"\"}")
+    puts "response message #{@response.body}"
 end
