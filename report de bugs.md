@@ -1,6 +1,6 @@
 # Report de Bug
 
-#### Cenario 1 - Enviando a mensagem ao destinatario
+#### Cenario 1 - Envio da mensagem ao destinatario
 
     Dado a uri da api
     quando entrar com a mensagem e o numero do destinatario
@@ -17,7 +17,6 @@
 **Status:**
 
 - Passou
-
 
 #### Cenario 2 - Envio da mensagem para o mesmo numero de destinatario do cenario 1
 
@@ -37,11 +36,10 @@
 
 - Falhou.
 
-
 #### Cenario 3 - Envio da mensagem sem o campo de numero do destinatario
 
     Dado a URI da api
-    Quando inserido a mensagem e não inserido o numero do destinatario
+    Qaundo inserido a mensagem e não inserido o numero do destinatario
     Então a mensagem não deve ser enviada
     
 **Resultado esperado:**
@@ -56,8 +54,7 @@
 
 - Passou
 
-
-#### Cenario 4 - Enviando mensagem excedendo o numero de caracteres
+#### Cenario 4 - Envio da mensagem excedendo o numero de caracteres
     
     Dado a uri da api
     Quando eu inserir o texto excedendo o numero de caracteres
@@ -75,8 +72,7 @@
 
 - Falhou
 
-
-#### Cenario 5 - Enviando mensagem com o campo mensagem vazio.
+#### Cenario 5 - Envio da mensagem com o campo mensagem vazio.
 
     Dado a URI da api
     Quando eu inserir o numero do destinatario mas nao inserir o campo mensagem
@@ -93,7 +89,6 @@
 **Status:**
 
 - Falhou
-
 
 #### Cenario 6 - Envio de mensagem excedendo o limite do campo numero destinatario
 
@@ -113,8 +108,7 @@
 
 - Passou 
 
-
-#### Cenario 7 - Envio de mensagem com o campo numero de destinatario menor que 11 digitos
+#### Cenario 7 - Envio de mensagem com o ca mpo numero de destinatario menor que 11 digitos
 
     Dado a URI da api
     Quando eu inserir o numero de destinatario menor do que 11 digitos
